@@ -14,6 +14,26 @@
 ```
 apt install wireguard -y
 ```
-> Ubuntu
+> cli
 ```
+sudo dnf install elrepo-release epel-release -y
+sudo dnf install kmod-wireguard wireguard-tools -y
 ```
+> srv
+
+### Generate key pairs
+```
+cd /etc/wireguard
+wg genkey | tee srv-priv.key | wg pubkey > srv-pub.key
+```
+> srv key generation
+```
+cd /etc/wireguard
+wg genkey | tee cli-priv.key | wg pubkey > cli-pub.key
+```
+> cli key generation
+```
+cd /etc/wireguard
+wg genkey | tee vyos-priv.key | wg pubkey > vyos-pub.key
+```
+> vyos key generation
