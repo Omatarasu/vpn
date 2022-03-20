@@ -52,7 +52,7 @@ PrivateKey = sLwb/65WouPOcc2DkQqKShLbOZKny9hsk0SZ195nWls=
 PublicKey = /o0yFkW8OPgz2nwYeSiiaaEYn+LNTBzmJTYwx2vcbzA=
 PresharedKey =  IdrbZlpw7tXRuu3Rv+iYLQ9gnwjoxoq6gjan2osuNp8=
 
-AllowedIPs = 192.168.50.10/24, 10.0.0.0/30 # ip r
+AllowedIPs = 192.168.10.0/24, 10.0.0.0/30 # ip r
 Endpoint = 192.168.70.10:51820 # vyos server
 ```
 > /etc/wireguard/wg0.conf
