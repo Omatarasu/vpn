@@ -51,8 +51,10 @@ save
 #### centos to vyos (server)
 ```
 [Interface]
-Address = 10.0.0.2/32
+Address = 10.0.0.2/30
 PrivateKey = sLwb/65WouPOcc2DkQqKShLbOZKny9hsk0SZ195nWls=
+PostUp = nft add rule inet filter input udp dport 51820 counter accept ; nft add rule nat postrouting ip saddr 10.0.0.0/30 oifname enp7s0 counter snat to 192.168.20.10
+PostDown = systemctl restart nftables.service
 
 [Peer]
 PublicKey = /o0yFkW8OPgz2nwYeSiiaaEYn+LNTBzmJTYwx2vcbzA=
