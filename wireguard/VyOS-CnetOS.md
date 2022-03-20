@@ -66,3 +66,9 @@ Endpoint = 192.168.70.10:51820 # vyos server
 systemctl start wg-quick@wg0.service
 ```
 > start wiregurd
+
+#### vyos to ubuntu
+> same config
+#### ubuntu to vyos 
+> same config
+#
