@@ -38,6 +38,12 @@ set interfaces wireguard wg0 peer centos public-key 'AZYFjr+jb8yYpjkiT0/ZZmx81p0
 ```
 > Peer configuration
 ```
+set nat source rule 10 outbound-interface 'eth1'
+set nat source rule 10 source address '10.0.0.2'
+set nat source rule 10 translation address '192.168.10.10'
+```
+> SNAT vpn to lan
+```
 commit 
 save
 ```
